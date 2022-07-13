@@ -9,8 +9,7 @@ from oauth2client.file import Storage
 from oauth2client.client import OAuth2WebServerFlow
 from oauth2client.tools import run_flow,argparser
 from rfc3339 import rfc3339
-#from google_auth_oauthlib.flow import InstalledAppFlow
-# def test(request):
+
 FLAGS = gflags.FLAGS
 
 FLOW = OAuth2WebServerFlow(
@@ -19,9 +18,6 @@ client_secret='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',
 scope='https://www.googleapis.com/auth/calendar',
 user_agent='calTest')
 #redirect_uri = 'http://127.0.0.1:8000/result/')
-# scopes='https://www.googleapis.com/auth/calendar'
-# FLOW = InstalledAppFlow.from_client_secrets_file('details.json',scopes=scopes)
-# FLOW.run_console()
 
 storage = Storage('.git/calendar.dat')
 flags = argparser.parse_args(args=[])
@@ -50,13 +46,12 @@ event = {
 }
 created_event = service.events().insert(calendarId='mmandali@codal.com', body=event).execute()
 print("Created Event: %s" % created_event['id'])
-  # return HttpResponse("DONE")
+ 
 
 
 
 
 
-# https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=324946795894-5fq9fkvh7tu4vciscqqap40iqac4f8ug.apps.googleusercontent.com&redirect_uri=https://www.example.com/callback/&scope=https://www.googleapis.com/auth/calendar&access_type=offline
 
 
 #git log --oneline ->	Fits each commit on a single line which is useful for an overview of the project history.
