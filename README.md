@@ -29,7 +29,7 @@ step 7 - Go to credentials and click create credentials and select oauth , selec
 
 step 8 - client id and secret are created , save them.
 
-step -9 for developer key - again go to create credentials and select api key and api key is created.
+step 9 - for developer key - again go to create credentials and select api key and api key is created.
 
 # for calendar id
 go to you calendar select any calendar from my calendars , scroll and click to : and go to settings and there you find you calendar id .
